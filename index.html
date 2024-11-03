@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Flatiron Task Lister</title>
+  <script src="https://cdn.jsdelivr.net/npm/js-confetti@latest/dist/js-confetti.browser.js"></script>
+  <script defer src="./src/index.js"></script>
   <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -12,16 +14,36 @@
     <form id="create-task-form" action="" method="POST">
       <label for="new-task-description">Task description:</label>
       <input type="text" id="new-task-description" name="new-task-description" placeholder="description">
+      <select id="new-task-priority" name="new-task-priority">
+        <option value="high">High</option>
+        <option value="medium">Medium</option>
+        <option value="low">Low</option>
+      </select>
+      <input type="date" id="new-task-due-date" name="new-task-due-date" placeholder="due date">
       <input type="submit" value="Create New Task">
     </form>
 
     <div id="list">
       <h2>My Todos:</h2>
-      <ul id="tasks">
+      <!-- <div class="task-labels">
+        <h3 class="description-label">Description</h3>
+        <h3 class="priority-label">Priority</h3>
+        <h3 class="due-date-label">Due Date</h3>
+      </div> -->
+      <ul class="tasks">
       </ul>
     </div>
 
-    <script src="./src/index.js"></script>
+    <div id="complete">
+      <h2>Completed Tasks:</h2>
+      <!-- <div class="task-labels">
+        <h3 class="description-label">Description</h3>
+        <h3 class="priority-label">Priority</h3>
+        <h3 class="due-date-label">Due Date</h3>
+      </div> -->
+      <ul class="tasks">
+      </ul>
+    </div>
   </div>
 
 </body>

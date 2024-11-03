@@ -1,17 +1,23 @@
 html {
   height: 100%;
   width: 100%;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Candara", sans-serif;
 }
 
 body {
   min-height: 100%;
   min-width: 100%;
-  background: linear-gradient(pink, violet);
+  background: linear-gradient(blue, navy);
+}
+
+h3 {
+  font-size: 10px;
 }
 
 button {
-  font-size: 7px;
+  height: 20px;
+  position: relative;
+  font-size: 10px;
 }
 
 #main-content {
@@ -27,11 +33,51 @@ button {
   box-shadow: 2px 5px 5px #333;
 }
 
-#list {
+#list, #complete {
+  width: 90%;
   margin: 10px;
   border: 1px solid #333;
   background: rgba(255, 255, 255, 0.75);
   padding: 15px 20px 18px 18px;
   border-radius: 5px;
   box-shadow: 2px 5px 5px #333;
+}
+
+.tasks * {
+  margin: 1px;
+}
+
+.task-labels {
+  width: 100%;
+  float: left;
+  display: flex;
+}
+
+.task-description, .description-label {
+  width: 50%;
+}
+
+.task-priority, .priority-label {
+  max-width: 100px;
+}
+
+.task-due-date, .due-date-label {
+  max-width: 100px;
+}
+
+.high input, .high select {
+  color: red;
+}
+
+.medium input, .medium select {
+  color: orange;
+}
+
+.low input, .low select {
+  color: green;
+}
+
+.disabled input, .disabled select {
+  background-color: none;
+  border: none;
 }
